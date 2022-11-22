@@ -12,6 +12,8 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
     
     var mSceneView: ARSCNView!
     
+    var mCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,12 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
         mSceneView = ARSCNView(frame: self.view.bounds)
         mSceneView.delegate = self
         self.view.addSubview(mSceneView)
+        
+//        let frontView = UIView(frame: CGRect(x: 0, y: 100, width: 200, height: 100))
+//        frontView.backgroundColor = .blue
+//        self.view.addSubview(frontView)
+//
+//        animationE(animationView: frontView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,5 +52,32 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
         planeNode.eulerAngles.x = -.pi / 2
         
         node.addChildNode(planeNode)
+        
+        mCount += 1
+        let picName = referenceImage.name
+        print("renderer didAdd, name = \(String(describing: picName)), mCount = \(mCount)")
     }
+    
+//    func animationE(animationView: UIView) -> Void {
+//        UIView.animateKeyframes(withDuration: 8, delay: 0, options: .calculationModeLinear, animations: {
+//                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0/4, animations: {
+//                     animationView.backgroundColor = UIColor.red
+//                })
+//                UIView.addKeyframe(withRelativeStartTime: 1.0/4, relativeDuration: 1.0/4, animations: {
+//                    animationView.backgroundColor = UIColor.green
+//                })
+//                UIView.addKeyframe(withRelativeStartTime: 2.0/4, relativeDuration: 1.0/4, animations: {
+//                    animationView.backgroundColor = UIColor.blue
+//                })
+//                UIView.addKeyframe(withRelativeStartTime: 3.0/4, relativeDuration: 1.0/4, animations: {
+//                    animationView.backgroundColor = UIColor.magenta
+//                })
+//                UIView.addKeyframe(withRelativeStartTime: 4.0/4, relativeDuration: 1.0/4, animations: {
+//                    animationView.backgroundColor = UIColor.purple
+//                })
+//            }) { (isFinish) in
+//                // code.... 动画结束后的处理内容
+//                animationView.backgroundColor = UIColor.cyan
+//            }
+//    }
 }
