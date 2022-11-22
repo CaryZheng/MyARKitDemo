@@ -12,6 +12,8 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
     
     var mSceneView: ARSCNView!
     
+    var mCatImageView: UIImageView!
+    
     var mCount = 0
     
     override func viewDidLoad() {
@@ -46,16 +48,48 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         
         let referenceImage = imageAnchor.referenceImage
-        let plane = SCNPlane(width: referenceImage.physicalSize.width, height: referenceImage.physicalSize.height)
+//        let plane = SCNPlane(width: referenceImage.physicalSize.width, height: referenceImage.physicalSize.height)
         
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.eulerAngles.x = -.pi / 2
-        
-        node.addChildNode(planeNode)
+//        let planeNode = SCNNode(geometry: plane)
+//        planeNode.eulerAngles.x = -.pi / 2
+//
+//        node.addChildNode(planeNode)
         
         mCount += 1
         let picName = referenceImage.name
         print("renderer didAdd, name = \(String(describing: picName)), mCount = \(mCount)")
+        
+        if picName == "pic_chicken_ps" {
+            DispatchQueue.main.async { [weak self] in
+                self?.playCatAnimation()
+            }
+        }
+    }
+    
+    func playCatAnimation() {
+        var imgArray = [UIImage]()
+        for i in 0..<40 {
+            let imageName = i<10 ? "eat_0\(i)" : "eat_\(i)"
+            let image = UIImage(named: imageName)!
+            imgArray.append(image)
+        }
+        
+        if nil == mCatImageView {
+            mCatImageView = UIImageView(image: imgArray[0])
+            mCatImageView.center = self.view.center
+            
+            self.view.addSubview(mCatImageView)
+        }
+        
+        mCatImageView.animationImages = imgArray
+        mCatImageView.animationDuration = Double(imgArray.count) * 0.1
+        mCatImageView.animationRepeatCount = 1
+        mCatImageView.startAnimating()
+                
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] timer in
+            self?.mCatImageView.removeFromSuperview()
+            self?.mCatImageView = nil
+        }
     }
     
 //    func animationE(animationView: UIView) -> Void {
