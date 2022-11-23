@@ -14,6 +14,7 @@
 		4AA48338292CCCCB007A59CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA48337292CCCCB007A59CC /* Assets.xcassets */; };
 		4AA4833B292CCCCB007A59CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA48339292CCCCB007A59CC /* LaunchScreen.storyboard */; };
 		4AA48343292CCF59007A59CC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA48342292CCF59007A59CC /* SecondViewController.swift */; };
+		4AA48345292DD080007A59CC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA48344292DD080007A59CC /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4AA4833A292CCCCB007A59CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AA4833C292CCCCB007A59CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AA48342292CCF59007A59CC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4AA48344292DD080007A59CC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				4AA48339292CCCCB007A59CC /* LaunchScreen.storyboard */,
 				4AA4833C292CCCCB007A59CC /* Info.plist */,
 				4AA48342292CCF59007A59CC /* SecondViewController.swift */,
+				4AA48344292DD080007A59CC /* ThirdViewController.swift */,
 			);
 			path = MyARKitDemo;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				4AA48343292CCF59007A59CC /* SecondViewController.swift in Sources */,
 				4AA48333292CCCC9007A59CC /* ViewController.swift in Sources */,
+				4AA48345292DD080007A59CC /* ThirdViewController.swift in Sources */,
 				4AA4832F292CCCC9007A59CC /* AppDelegate.swift in Sources */,
 				4AA48331292CCCC9007A59CC /* SceneDelegate.swift in Sources */,
 			);
