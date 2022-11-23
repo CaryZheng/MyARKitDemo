@@ -50,6 +50,12 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
                 self?.playCatAnimation()
             }
         }
+        
+        if name == "kxt" {
+            DispatchQueue.main.async { [weak self] in
+                self?.playCatAnimation()
+            }
+        }
     }
     
     func playCatAnimation() {
