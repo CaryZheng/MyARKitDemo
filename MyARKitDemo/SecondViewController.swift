@@ -59,11 +59,11 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
         let picName = referenceImage.name
         print("renderer didAdd, name = \(String(describing: picName)), mCount = \(mCount)")
         
-        if picName == "pic_chicken_ps" {
+//        if picName == "pic_chicken_ps" {
             DispatchQueue.main.async { [weak self] in
                 self?.playCatAnimation()
             }
-        }
+//        }
     }
     
     func playCatAnimation() {

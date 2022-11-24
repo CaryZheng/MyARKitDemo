@@ -34,7 +34,7 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionObjects = referenceObjects
         
-//        mSceneView.debugOptions = .showFeaturePoints
+        mSceneView.debugOptions = .showFeaturePoints
         mSceneView.session.run(configuration)
     }
     
