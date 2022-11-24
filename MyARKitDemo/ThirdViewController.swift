@@ -34,7 +34,7 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionObjects = referenceObjects
         
-        mSceneView.debugOptions = .showFeaturePoints
+//        mSceneView.debugOptions = .showFeaturePoints
         mSceneView.session.run(configuration)
     }
     
@@ -45,13 +45,9 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         
         print("识别出 Object, name = \(String(describing: name))")
         
-        if name == "ymhd" {
-            DispatchQueue.main.async { [weak self] in
-                self?.playCatAnimation()
-            }
-        }
-        
-        if name == "kxt" {
+        if name == "ymhd"
+            || name == "kxt"
+            || name == "zuozhu" {
             DispatchQueue.main.async { [weak self] in
                 self?.playCatAnimation()
             }
