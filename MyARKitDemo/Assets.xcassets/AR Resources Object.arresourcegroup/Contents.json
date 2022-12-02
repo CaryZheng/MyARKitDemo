@@ -5,12 +5,6 @@
   },
   "resources" : [
     {
-      "filename" : "kxt.arobject"
-    },
-    {
-      "filename" : "ymhd.arobject"
-    },
-    {
       "filename" : "zuozhu.arobject"
     }
   ]

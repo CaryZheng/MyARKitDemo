@@ -298,6 +298,8 @@
 				DEVELOPMENT_TEAM = Y3G2JTS556;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyARKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyARJpgDemo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "用于AR场景";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,6 +328,8 @@
 				DEVELOPMENT_TEAM = Y3G2JTS556;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyARKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyARJpgDemo;
+				INFOPLIST_KEY_NSCameraUsageDescription = "用于AR场景";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

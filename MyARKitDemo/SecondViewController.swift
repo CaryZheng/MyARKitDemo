@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources PNG", bundle: nil) else {
             fatalError("AR Resources 资源文件不存在!")
         }
         

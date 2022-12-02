@@ -1,0 +1,26 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "pic_3_ps.arreferenceimage"
+    },
+    {
+      "filename" : "zuozhu_1_ps.arreferenceimage"
+    },
+    {
+      "filename" : "zuozhu_2_ps.arreferenceimage"
+    },
+    {
+      "filename" : "zuozhu_3_ps.arreferenceimage"
+    },
+    {
+      "filename" : "zuozhu_4_ps.arreferenceimage"
+    },
+    {
+      "filename" : "zuozhu_5_ps.arreferenceimage"
+    }
+  ]
+}

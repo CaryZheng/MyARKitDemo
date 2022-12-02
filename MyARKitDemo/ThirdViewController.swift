@@ -39,19 +39,20 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let objectAnchor = anchor as? ARObjectAnchor else { return }
+//        guard let objectAnchor = anchor as? ARObjectAnchor else { return }
         
-        let name = objectAnchor.referenceObject.name
-        
-        print("识别出 Object, name = \(String(describing: name))")
-        
-        if name == "ymhd"
-            || name == "kxt"
-            || name == "zuozhu" {
-            DispatchQueue.main.async { [weak self] in
-                self?.playCatAnimation()
+        if let objectAnchor = anchor as? ARObjectAnchor {
+            let name = objectAnchor.referenceObject.name
+            
+            print("识别出 Object, name = \(String(describing: name))")
+            
+            if name == "zuozhu" {
+                DispatchQueue.main.async { [weak self] in
+                    self?.playCatAnimation()
+                }
             }
         }
+        
     }
     
     func playCatAnimation() {
@@ -75,8 +76,10 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         mCatImageView.startAnimating()
                 
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] timer in
-            self?.mCatImageView.removeFromSuperview()
-            self?.mCatImageView = nil
+            if nil != self?.mCatImageView {
+                self?.mCatImageView.removeFromSuperview()
+                self?.mCatImageView = nil
+            }
         }
     }
 }
